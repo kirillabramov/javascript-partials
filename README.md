@@ -3,7 +3,10 @@
 Pagination.js Initialization
 _________________________________
 
-// simple pagination made by me
+<pre>
+  
+  
+  // simple pagination made by me
 // initialization
 // change ALL selectors and variables that called by X with your own selectors and variables
 
@@ -34,5 +37,7 @@ $(XselectorOfNumber).on('click', e => {
   let numberOfPage = Number($(e.target).html());
   _pagination.handleNumberOfPages(numberOfPage);
 });
+
+</pre>
 
 ____________________________________
