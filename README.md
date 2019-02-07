@@ -1,12 +1,12 @@
 # javascript-partials
 
-Pagination.js Initialization
+# Pagination.js Initialization
 _________________________________
 
-<pre>
+```
   
   
-  // simple pagination made by me
+// simple pagination made by me
 // initialization
 // change ALL selectors and variables that called by X with your own selectors and variables
 
@@ -38,6 +38,17 @@ $(XselectorOfNumber).on('click', e => {
   _pagination.handleNumberOfPages(numberOfPage);
 });
 
-</pre>
+```
 
 ____________________________________
+
+
+# Sorting.js
+
+```
+
+itemsToSort -> exact path to the values  (document.querySelectorAll('.time-info__intime .time-info__overflow')) 
+itemsWrappers -> exact path to the wrapper of values (document.querySelectorAll('.time-info__intime'))
+typeOfSorting -> if you pass TRUE -> sort will High To Low values, else -> sort will Low To High values
+
+```
