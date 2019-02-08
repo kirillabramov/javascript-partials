@@ -52,3 +52,24 @@ itemsWrappers -> exact path to the wrapper of values (document.querySelectorAll(
 typeOfSorting -> if you pass TRUE -> sort will High To Low values, else -> sort will Low To High values
 
 ```
+____________________________________
+
+
+
+# Sorting data-attribute.js
+
+```
+
+let _sorting = new Sorting();
+let itemsToSort = document.querySelectorAll('.item');
+itemsToSort = Array.prototype.slice.call(itemsToSort, 0);
+
+// true -> HighToLow sorting, false -> LowToHigh sorting
+_sorting.initSorting(itemsToSort, wrapperOfYourItems, false, 'data-atribute');
+
+```
+
+____________________________________
+
+
+
