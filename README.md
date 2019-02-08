@@ -43,7 +43,7 @@ $(XselectorOfNumber).on('click', e => {
 ____________________________________
 
 
-# Sorting.js
+# Sorting.js (by value of html)
 
 ```
 
