@@ -1,6 +1,6 @@
-NAIVE solution
+// NAIVE solution
 
-```javascript
+
 function maxSumSlice (arr, num) {
     if(arr.length < num) {
         return null;
@@ -26,11 +26,10 @@ function maxSumSlice (arr, num) {
 }
 
 maxSumSlice([1,2,3], 2);
-```
 
-Sliding Window Pattern Solution
 
-```javascript
+// Sliding Window Pattern Solution
+
  function maxSumSlice(arr, num) {
     let maxSum = 0;
     let tempSum = 0;
@@ -54,4 +53,4 @@ Sliding Window Pattern Solution
         maxSum = Math.max(tempSum, maxSum);
     }
     return maxSum;
-}```
+}
