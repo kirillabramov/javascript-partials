@@ -1,7 +1,7 @@
-// NAIVE solution
+// NAIVE solution O(n^2)
 
 
-function maxSumSlice (arr, num) {
+function maxSumSlice (arr, num) { 
     if(arr.length < num) {
         return null;
     };
@@ -28,7 +28,7 @@ function maxSumSlice (arr, num) {
 maxSumSlice([1,2,3], 2);
 
 
-// Sliding Window Pattern Solution
+// Sliding Window Pattern Solution O(n)
 
  function maxSumSlice(arr, num) {
     let maxSum = 0;
@@ -57,10 +57,10 @@ maxSumSlice([1,2,3], 2);
 
 // ------------------------------------------------------------------------------------------------------------------------ //
 
-// Multiple Pointers Pattern solution (works only with SORTED arrays)
+// Multiple Pointers Pattern solution (works only with SORTED arrays) O(n)
 
 
-function countUniqueValues(arr) {
+function countUniqueValues(arr) { 
     if(arr.length === 0) return 0;
     let i = 0;
     // проверяем первый элемент, со следующим
@@ -81,5 +81,32 @@ function countUniqueValues(arr) {
 
 countUniqueValues([1,1,1,1,1,1,1,1]);
 
+// BINARY SEARCH O(log n)
+
+function binarySearch(array, value) {
+
+    // array = [1,2,3,5,7,8,9,10,11, 13]; 0 - 8;
+    // value = 3;
+    
+    let min = 0; 
+    let max = array.length - 1;
+
+    while (max => min) {
+        let middle = Math.floor((min + max) / 2); // index = 4; | ITERATION_2: index = 1; 
+        let currentElement = array[middle];
+        
+        if(array[middle] < val) { // if 8 < 3; false; | ITERATION_2: if 1 < 3 = true; min = 1 + 1 = 2;
+            min = middle + 1;
+        } 
+        else if (array[middle] > val) { // if 8 > 3 true; | 
+            max = middle - 1; // max = 4 - 1 = 3; | 
+        }
+
+        else {
+            return middle;
+        }
+    }
+    return -1;
+}
 
 
