@@ -109,4 +109,23 @@ function binarySearch(array, value) {
     return -1;
 }
 
+// PigLatin Algorithm solution
 
+function translatePigLatin(str) {
+    let regex = /[aiueo]/;
+    let pigLatin = '';
+
+    if(str[0].match(regex)) pigLatin = `${str}way`;
+    else if(str.match(regex) === null) pigLatin = `${str}ay`;
+    else {
+        let vowel = str.indexOf(str.match(regex)[0]);
+        console.log(str.substr(vowel) , str.substr(0, vowel));
+        // str.substr(vowel) -> cut chars from vowel 'hhhello' -> 'ello'
+        // str.substr(0, vowel) ->  'hhh'
+        // ellohhhay
+        pigLatin = str.substr(vowel) + str.substr(0, vowel) + 'ay';
+    }
+    return pigLatin;
+}
+
+translatePigLatin('hhhello');
