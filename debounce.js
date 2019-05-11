@@ -3,9 +3,9 @@
 // N milliseconds. If `immediate` is passed, trigger the function on the
 // leading edge, instead of the trailing.
 
-const debounceES6 = (func, wait, immediate, timeout = undefined) => function() {
+const debounceES6 = (func, wait, immediate, timeout = undefined) => (...arguments) => {
     const context = this
-    const args = arguments
+    const args = [...arguments]
     const later = function() {
         timeout = null
         if (!immediate) func.apply(context, args)
